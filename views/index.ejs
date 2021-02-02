@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+
+    <br>
+    <h2>Mon formulaire</h2>
+
+    <form method="post" action="/upload" enctype="multipart/form-data">
+      <input type="text" name="lastname">
+      <input type="file" name="myFile">
+      <button>Valider</button>
+    </form>
+    
+    <img src="<%= file != undefined ? file : ''%>">
+  </body>
+</html>
